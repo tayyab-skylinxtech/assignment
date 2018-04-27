@@ -35,4 +35,8 @@ class Questionair extends Model
     		return 'No';
     	}
 	}
+
+    public function questions(){
+        return $this->hasMany('App\Question');
+    }
 }

@@ -19,8 +19,8 @@
 		  	@foreach ($questionairs as $index => $questionair)
 	  		  	<tr>
 			      <th scope="row">{{$index+1}}</th>
-			      <td>{{$questionair->questionair_name }} <a href="{{ route('questions.create',$questionair->id) }}">Add</a></td>
-			      <td>Otto</td>
+			      <td>{{$questionair->questionair_name }}</td>
+			      <td>{{count($questionair->questions) }} <a href="{{ route('questions.create',$questionair->id) }}">Add</a></td>
 			      <td>{{$questionair->duration}}</td>
 			      <td>{{$questionair->can_resume}}</td>
 
